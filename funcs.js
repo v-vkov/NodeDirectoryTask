@@ -1,8 +1,3 @@
-module.exports.createFolder = createFolder;
-module.exports.createStudent = createStudent;
-module.exports.picsAdd = picsAdd;
-module.exports.toChangeFolder = toChangeFolder;
-
 const fs = require("fs");
 
 function createFolder (folderName){
@@ -23,3 +18,8 @@ function createStudent (folderName, studName, profile) {
 function picsAdd (picsFold, studFold) {
     fs.createReadStream(picsFold).pipe(fs.createWriteStream(studFold));
 }
+
+module.exports.createFolder = createFolder;
+module.exports.createStudent = createStudent;
+module.exports.picsAdd = picsAdd;
+module.exports.toChangeFolder = toChangeFolder;
